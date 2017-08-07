@@ -41,9 +41,9 @@ namespace BookShopBLL
         /// 显示书籍的详细内容
         /// </summary>
         /// <returns></returns>
-        public List<Books> ParticularBookShow()
+        public List<Books> ParticularBookShow(int ID)
         {
-            return hbs.ParticularBookShow();
+            return hbs.ParticularBookShow(ID);
         }
         }
 }

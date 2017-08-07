@@ -22,10 +22,12 @@ namespace BookModels
         public string ContentDescription { get; set; }
         public string AuthorDescription { get; set; }
         public string EditorComment { get; set; }
-        public string  TOC { get; set; }
+        public string TOC { get; set; }
         public int CategoryId { get; set; }
         public int Clicks { get; set; }
         public string ImageType { get; set; }
         public string ImageName { get; set; }
+
+        public string Name { get; set; }
     }
 }

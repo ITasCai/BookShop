@@ -6,6 +6,24 @@
 <link href="css/global.css" rel="stylesheet" /><link href="css/layout.css" rel="stylesheet" /><link href="css/template.css" rel="stylesheet" /><link href="css/focus.css" rel="stylesheet" />
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/public.js"></script>
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $.post(
+              "ashx/ParticularBookShow.ashx",
+          {
+              ID: window.location.search.toString().slice(1),
+          },
+          function (data, status) {
+              if (status == "success") {
+                  
+                  $("#dshow").html(data);
+              }
+          }
+            )
+            
+        })
+    </script>
 
 </head>
 <body onload="startclock();">
@@ -250,47 +268,8 @@
         您现在的位置：<a href="Index.html">网上书店</a> >> 图书详情 >>
             <span id="ContentPlaceHolder1_lblCurrent">Label</span>
     </div>
-    <div class="bookList">
-        <!--<div class="bookList_content">
-            <div class="bookDetail_content_left">
-                <img id="ContentPlaceHolder1_imgCover" src="img/BookCovers/20161212461.jpg" style="height:200px;width:176px;" />
-            </div>
-            <div class="bookDetail_content_right">
-                <ul>
-                    <li id="bookDetail_l1"><strong>图书名称:</strong><span id="ContentPlaceHolder1_lblBookName">ASP.NET MVC5</span><a href="#" class="blue_size"></a></li>
-                    <li id="bookDetail_l2"><strong>作者:</strong><span id="ContentPlaceHolder1_lblAuthor">安利阿托</span></li>
-                    <li id="bookDetail_l3">
-                        <ul>
-                            <li><strong>出版社:</strong><span id="ContentPlaceHolder1_lblPublishName">电子工业出版社</span></li>
-                            <li><strong>出版时间:</strong><span id="ContentPlaceHolder1_lblPublishDate">2016-12-26</span></li>
-                        </ul>
-                    </li>
-                    <li id="bookDetail_l4">
-                        <ul>
-                            <li><strong>ISBN:</strong><span id="ContentPlaceHolder1_lblISBN">23456789</span></li>
-                            <li><strong>字数:</strong><span id="ContentPlaceHolder1_lblWordsCount">9845</span></li>
-                        </ul>
-                    </li>
-                    <li id="bookDetail_l5">
-                        <ul>
-                            <li><strong>点击量:</strong><span id="ContentPlaceHolder1_lblClickCount">13</span></li>
-                            <li><strong>价格:</strong><span style="color:red;font-weight:bold">¥<span id="ContentPlaceHolder1_lblUnitPrice">100.00</span>元</span></li>
-                        </ul>
-                    </li>
-                    <li id="bookDetail_l6">
-                        <input type="image" name="ctl00$ContentPlaceHolder1$ibtnBuy" id="ContentPlaceHolder1_ibtnBuy" src="img/bnt_buy.gif" />
-                    </li>
-                </ul>
-            </div>
-            <div class="bookDetail_content_bottom"></div>
-            <div class="bookDetail_content_Descript_title">
-                <strong>图书内容描述:</strong>
-            </div>
-            <div class="bookDetail_content_Descript_p">
-                <p id="ContentPlaceHolder1_pdetails"><p>ASP.NET又称为ASP+，不仅仅是ASP的简单升级，而是微软公司推出的新一代脚本语言。ASP.NET基于.NET Framework的Web开发平台，不但吸收了ASP以前版本的最大优点并参照Java、VB语言的开发优势加入了许多新的特色，同时也修正了以前的ASP版本的运行错误。[1-2]&nbsp;</p><p>ASP.NET具备开发网站应用程序的一切解决方案，包括验证、缓存、状态管理、调试和部署等全部功能。在代码撰写方面特色是将页面逻辑和业务逻辑分开，它分离程序代码与显示的内容，让丰富多彩的网页更容易撰写。同时使程序代码看起来更洁净、更简单。</p><p><br/></p></p>
-            </div>
-        </div>-->
-    </div>
+    <div class="bookList" id="dshow">
+     
 
             </div>
 

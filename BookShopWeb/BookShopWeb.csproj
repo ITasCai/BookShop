@@ -124,6 +124,7 @@
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\bootstrap.min.css.map" />
     <Content Include="ashx\ParticularBookShow.ashx" />
+    <Content Include="ashx\IfUser.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1179,6 +1180,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ashx\IfUser.ashx.cs">
+      <DependentUpon>IfUser.ashx</DependentUpon>
+    </Compile>
     <Compile Include="ashx\NewestBookShow.ashx.cs">
       <DependentUpon>NewestBookShow.ashx</DependentUpon>
     </Compile>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="renderer" content="webkit" /><title>
 	用户登录
@@ -7,6 +7,56 @@
     <script src="js/pintuer.js"></script>
     <script>
         
+    </script>
+
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            createCode();
+
+            $("#btnlogin").click(function () {
+                $.post(
+         "ashx/IfUser.ashx",
+     {
+         LoginId: $("#txtLoginId").val(),
+         LoginPwd: $("#txtLoginPwd").val()
+     },
+     function (data, status) {
+         if (status == "success") {
+             var username = $("#txtLoginId").val();
+             var yzm = $("#yzm").text();
+             var txtyzm = $("#txtLogincode").val();
+             if (data > 0 && yzm == txtyzm) {
+                 alert("登录成功");
+                 window.location.href = "UserInfo.html?"+username;
+             } else {
+                 alert("登录失败");
+             }
+
+         }
+     }
+   )
+            })
+          
+
+        })
+        //随机验证码
+        function createCode() {
+            var code = "";
+            var codeLength = 4;
+            var checkCode = document.getElementById("yzm");
+            var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+                'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+                'u', 'v', 'w', 'x', 'y', 'z');
+            for (var i = 0; i < codeLength; i++) {
+                var num = Math.floor(Math.random() * 36)
+                code += codeChars[num];
+            }
+            checkCode.innerText = code;//验证码
+        }
+    
+
     </script>
 </head>
 <body>
@@ -85,7 +135,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tup','u
                                     <div class="field">
                                         <input name="txtLogincode" type="text" id="txtLogincode" class="input input-big" placeholder="验证码" data-validate="required:请输入验证码" />
                                         
-                                        <img src="../CreateCode.html" alt="" width="80" height="32" class="passcode" style="height: 43px; cursor: pointer;" />
+                                        <span  width="80" height="32" class="passcode" style="height: 43px; width:60px; background-color:aqua" id="yzm" onclick="createCode()"></span>
                                         
                                     </div>
 
@@ -95,7 +145,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tup','u
                             <div id="up">
 	
                                     <div style="padding: 10px 90px 30px 100px;">
-                                        <input type="submit" name="btnlogin" value="登录" id="btnlogin" class="button bg-main" />
+                                        <input type="button" name="btnlogin" value="登录" id="btnlogin" class="button bg-main" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a id="lbtnRegister" class="button bg-red" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbtnRegister&quot;, &quot;&quot;, false, &quot;&quot;, &quot;UserRegister.html&quot;, false, true))">注册</a>
                                     </div>

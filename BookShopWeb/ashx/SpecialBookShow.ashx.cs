@@ -49,7 +49,7 @@ namespace BookShopWeb.ashx
                 sbHtml.Append("<img style = 'width: 80px; height: 100px' src ='img/BookCovers/" + book.ImageName + ".jpg'/>");
                 sbHtml.Append("</dt>");
                 sbHtml.Append("<dd>");
-                sbHtml.Append("<a href ='BookDetails.html?bookId=" + book.Id+ "'><span class='book_title'>" + book.Title + "</span></a>");
+                sbHtml.Append("<a href ='BookDetails.html?"+book.Id+"'><span class='book_title'>" + book.Title + "</span></a>");
                 sbHtml.Append("<br/>");
                 sbHtml.Append("<span class='book_publish'>出版日期:" + book.PublishDate + "</span><br/><span style = 'color: red; font - weight: bold'> 价格：" + book.UnitPrice + "元</span>");
                 sbHtml.Append("</dd>");

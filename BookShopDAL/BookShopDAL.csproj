@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="HomePageBooksService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookShopCommon\BookShopCommon.csproj">

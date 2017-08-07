@@ -8,7 +8,7 @@ using BookModels;
 namespace IBookShopDAL
 {
     /// <summary>
-    /// 显示网站首页书籍内容
+    /// 显示网站首页书籍内容的接口
     /// </summary>
   public  interface IHomePageBooksShow
     {
@@ -28,7 +28,7 @@ namespace IBookShopDAL
         /// 显示书籍的详细内容
         /// </summary>
         /// <returns></returns>
-        List<Books> ParticularBookShow();
+        List<Books> ParticularBookShow(int ID);
     }
 
    
