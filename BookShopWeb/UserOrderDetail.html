@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+</title>
+     <link rel="stylesheet" href="css/pintuer.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+<link rel="stylesheet" href="css/pintuer.css" /><link rel="stylesheet" href="css/admin.css" />
+        <script src="js/jquery-1.9.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".leftnav h2").click(function () {
+                    $(this).next().slideToggle(200);
+                    $(this).toggleClass("on");
+                });
+                $(".leftnav ul li a").click(function () {
+                    $("#a_leader_txt").text($(this).text());
+                    $(".leftnav ul li a").removeClass("on");
+                    $(this).addClass("on");
+                });
+            });
+        </script>
+        <style>
+            .menu-top {
+                background: url(img/bg6.jpg);
+                height:70px;
+                overflow:hidden;
+            }
+            .leftnav-title1 { height:50px; background:url(img/left6.jpg);  color:#FFF; padding-left:22px;  font-size:14px; line-height:50px;}
+        </style>
+</head>
+<body>
+ <form method="post" action="./UserOrderDetail.html?orderID=14004" id="form1" class="form-x">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="qUEXnDUMyKPwuu5V1z2+V0w6g5AQb8czSry08zUKnhpyy1ihdSvPyTSlb4wwjZnYgtkrL4GSBDVB2sUVvtSNZAfNH/qHDlFcW6NTMZgCkoUuOM0I5fH9ZC+ED4ojs4jE3boToyPC4jTHuxZREnAzYxe7uIDTbqCOELgmloU/iINXR8P7DGZ2RutwB3niXNWQuQtDBu7iFFdP82ZKVh9TlIbyXoClf6w9eO/LZu6/DLnGhR9nwxADOc1cdFFqrRixp7pvojOGSpxqpwTI4Yg77m6T9NE2StQdDMRb5sQsX7yq45YkHLzCvqMGwfk0qF2kQOTGs9x+Nunv973hnRMnA2w/5j7TnNP+fM+Y+KyfCHBckWqvyF1czAySlACZAMK+1+CIbQHbTUB2eSVWO5gozGUZJ3zZmLNiQVLzDFcJnadudAbZfpnV7PHzD5WCAdSsqFTZ1Z6a/rjB4mxOOakpsD6wdtHd5MMuRm0Q54RpaGOFkoOgQy0sx2KDjVPS89tjBMQ1J7eptQRkvVG8pjKWpsG4lcfh0k2KImqHb4MLHZj3IGdgig0LY4uQbwOSebrGayKra+lfr2zK78GomP6oi06L55UdqykqDOnQTZCzjtp32/bUxg8vZ4vnhfOLNiuRQyOzdcPs3KhQxmtxMn6Qsqgulc19qI1chuDnot4Gpz5wSxZaTQpBq4tJzVV2r6q9R8JjCukc3ONzMwIgdVtCNLhUf7GMsKsDQ15xkCuQ7ig=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMaopRV5Hsrgs3jHpuEWFjtLO7ddtlpHu6wmJ_kguUedYm7EjnlhAFTK2W2HD_ca4Q2&amp;t=636255676860000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=9yI70IQfdNWWOGHK2vEJ3xSzz7-wxrKaSIatDsw5xYL0WP40DOOlmvC_Z-J0SWhuHgcBAx7XjQ9EnKU3I1nnpyMOe5bZbsgOpvcPuo60UWg47lgsQczlipVnu_y2orDl18HT_qFHdaLygngHfmrUFDIMx3qIhw6GVMI7DVKlMIA1&amp;t=ffffffff8ce90d1e" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 客户端框架未能加载。');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=McM9khqfd8P8zkBy4_CKwq7_aWJDab7uYZJrmCxk0xbRJaVhJrVLEFHoD6nGjKcP0xvLIGT1AWl8kJPcqF48slCb0URj13VPrJe1Li4e7fFFehQYDjTdVis8DGUKEDW7EktSSLOD3LnVjPrfEILq5ZFy7NgpBKtQDPSMioWIV0ouaOl5k1UcDyJJOYCcdCVX0&amp;t=ffffffff8ce90d1e" type="text/javascript"></script>
+        <div class=" menu-top">
+            <div class="logo margin-big-left fadein-top">
+                <h1>
+                    <img src="img/menukey.png" class="radius-circle rotate-hover" height="50" alt="" />用户管理中心
+                </h1>
+            </div>
+            <div class="head-l">
+                <a class="button button-little bg-green" href="../Book/Index.html"><span class="icon-home"></span>前台首页</a>
+                &nbsp;&nbsp;<a href="../Book/BookCar.html" class="button button-little bg-blue"><span class="icon-wrench"></span> 购物车</a>
+                &nbsp;&nbsp;
+                <a id="lbtnExit" class="button button-little bg-red" href="javascript:__doPostBack(&#39;ctl00$lbtnExit&#39;,&#39;&#39;)">退出登录</a>
+            </div>
+        </div>
+        <div class="leftnav">
+            <div class="leftnav-title1"><strong><span class="icon-list"></span>菜单列表</strong></div>
+            <h2><span class="icon-user"></span>信息维护</h2>
+            <ul style="display: block">
+                
+                <li><a href="UserInfo.html" ><span class="icon-caret-right"></span>我的资料</a></li>
+                <li><a href="UserPwd.html" ><span class="icon-caret-right"></span>修改密码</a></li>
+            </ul>
+            <h2><span class="icon-pencil-square-o"></span><a href="UserOrder.html">我的订单</a></h2>
+         
+            
+            
+                
+        
+        </div>
+        <ul class="bread">
+            <li><a href="http://www.baidu.com" class="icon-home">首页</a></li>
+            <li><a href="##" id="a_leader_txt">网站信息</a></li>
+            <li><b>欢迎您！</b><span style="color: red;"><span id="labname" style="font-weight: 700; color: #669900">jiaoke</span></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当前时间：<span style="color: red;"><span id="lblTime">2017/8/7 星期一 上午 7:21:07</span></span> </li>
+        </ul>
+        <div class="admin" style="height:700px">
+            
+            
+      <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptManager1', 'form1', ['tctl00$ContentPlaceHolder1$UpdatePanel1','ContentPlaceHolder1_UpdatePanel1'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <div class="panel admin-panel">
+            <div class="panel-head"><strong class="icon-reorder">订单明细</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>订单编号：</strong><span id="ContentPlaceHolder1_lblOrderId">14004</span></div>
+            <div id="ContentPlaceHolder1_UpdatePanel1">
+	
+                    <table class="table table-hover text-center">
+                        <tr>
+                            <td>
+                                <div>
+		<table cellspacing="0" cellpadding="4" id="ContentPlaceHolder1_gvOrderDetail" style="width:100%;border-collapse:collapse;">
+			<tr onmouseover="currentColor=this.style.backgroundColor;this.style.backgroundColor=&#39;#eaeaea&#39;;" onmouseout="this.style.backgroundColor=currentColor;">
+				<th scope="col">序号</th><th scope="col">图书封面</th><th scope="col">图书名称</th><th scope="col">数量</th><th scope="col">单价</th><th scope="col">订单日期</th>
+			</tr><tr onmouseover="currentColor=this.style.backgroundColor;this.style.backgroundColor=&#39;#eaeaea&#39;;" onmouseout="this.style.backgroundColor=currentColor;">
+				<td>
+                                                <span id="ContentPlaceHolder1_gvOrderDetail_lblNo_0">1</span>
+                                            </td><td>
+                                                <img id="ContentPlaceHolder1_gvOrderDetail_imgCover_0" src="img/BookCovers/978711515888.jpg" style="height:50px;width:46px;" />
+                                            </td><td>Effective C# 中文版</td><td>1</td><td>
+                                                <span id="ContentPlaceHolder1_gvOrderDetail_lblPrice_0" style="color:Red;">49.00</span>
+                                            </td><td>
+                                                <span id="ContentPlaceHolder1_gvOrderDetail_lblOrderDate_0">2017年08月07日</span>
+                                            </td>
+			</tr>
+		</table>
+	</div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div>
+                                    
+	<!-- AspNetPager 7.5.1 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+	<!--记录总数只有一页，AspNetPager已自动隐藏，若需在只有一页数据时显示AspNetPager，请将AlwaysShow属性值设为true！-->
+	<!-- AspNetPager 7.5.1 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+
+	
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                
+</div>
+        </div>
+
+        </div>
+        
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F8DB0455" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="UoGPEL15DdJktiHRkIY5ubGBZHXjQKYOODHOaM+Ge2c2kItiedVTzsBD87aRNG+ur7nC45BQhi/qY9tAM3/rwvDUf7vRg2Mz2hJcH7UeI/nVJ3z/dLedNB8QahUa32+A" />
+</div></form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Firefox","requestId":"3fab6d1bc33f44ec84cf8a12c048b289"}
+</script>
+<script type="text/javascript" src="http://localhost:16604/684f63152dfd463dab384f72747561d2/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>

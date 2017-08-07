@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+</title>
+<link href="css/global.css" rel="stylesheet" /><link href="css/layout.css" rel="stylesheet" /><link href="css/template.css" rel="stylesheet" /><link href="css/focus.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/public.js"></script>
+
+</head>
+<body onload="startclock();">
+    <form method="post" action="./BookOrder.html" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="P0fpTEwKwL/0l9MuITgVsAKt44UKj1NFuLgAgl4XW050NLI4itvcxoXOWcnXOu5Lz3bGL0vah+lBvnXY//2IL5SqgpBPcKrFnXn6L9NwYJVkQYS4teRp1Dc7ZdRKPVmLGD5036Q0Vm0wB7jWOnxfSS51mk072sr7JXofLgOZrvIsUubhoAglHM6cNOcHuCmaKw2YMVkhwHQbNFUW6VGj2EW2AdZCuYt5N2wH6vRO9EvpJej/WR4c8+/dSTi3YNYsLZBskKPi1zjpP2BL0IJVb2yCnoMrLnSsX+8U49PZcny/dEuiPvF/pMAwOkEkogVT1lZmHAOVc6Idprns+Z8KQPUXG7XBRDKFxYk/zK95MHub5XxA/I+EQ9J32jhTn25puQlseKOFt4bxTPKphI3BOyQHIiBhjCIIHxFPP/1NMnqvTgfqvU7qhsKSmHcFZdmK27IIycWZRegRqhZ8xLnbgYPw4t+H/8owWrSAQbIHiC1l3HCoTG2xch3NfDe+kEgTMB29U76EzMb/acvsY9+A21SB7PnaQij+o3Im1S78nVoX3CdyHlAALz/QEZz1tTbHV0MzR2G+sKsnvHt7wBibF6sD5WRIE34DTW/MwKsaDoqD5aVzCjCMsR5yZbSJIrT4L5fnA6LKDZhR2GZzruJ7tazc/g5pAFD/vZXsJHcArvh68bIDKmBpqzgBkjPdTa+FL2RWt4/pOBjNTBwUXtBoQYeabeqZM+YXMf4D6uhgl5AMm11naVdw3tzfaTsImUFFNB3vg8uIRHRYq2W/ODqJILwAxO9SPfBxKhetadAvoxN9ctz+mKDCoq0sFhuDiki8IbSXIztMXCry6B8BGoC9GzLC3IGG9c28xAiWzAzIGwcsRIGhnYtfo0ZkWiZ8Pn8xPNKiJHz3YvBJWGNJEfYpvQdSLemcXuIWge/W2sXMDrZqbQXgmRY7SRCvl7T7+EoaebolPkH7LB5ojwX1uVzV34dR19R2s1e4g5F/fZAj1Zx8oYLntF9YeVPju0zqx6JM3Kk2dUMKqb0huur0jL/PiD4sC9+3MZjAK4AcqpvTM71sYs1NI6jQO5MBJjahqESlfYjrjNrNDDpZl18djPTXK2imbSzwOEbk5xozKtLr2f0=" />
+</div>
+
+        <div id="header">
+            
+<link href="css/global.css" rel="stylesheet" />
+<link href="css/layout.css" rel="stylesheet" />
+<link href="css/template.css" rel="stylesheet" />
+<link href="css/focus.css" rel="stylesheet" />
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    function displaySubMenu(li) {
+        //var subMenu = li.getElementsByTagName("ul")[0];
+        var subMenu = document.getElementById("category");
+        subMenu.style.display = "block";
+    }
+    function hideSubMenu(li) {
+        //var subMenu = li.getElementsByTagName("ul")[0];
+        var subMenu = document.getElementById("category");
+        subMenu.style.display = "none";
+    }
+</script>
+<div class="header_top">
+    <div class="header_top_left">
+        <span id="header1_lblUser" style="color:Red;">jiaoke</span>
+        您好,欢迎光临! [  <a href="../User/UserRegister.html">免费注册 </a>]
+                       <span>&nbsp;<label id="lblTime" style="color: red;"></label></span>
+    </div>
+    <div class="header_top_right">
+        <ul>
+            <li><a href="#" target="_self">帮助</a></li>
+            <li>|</li>
+            <li><a href="javascript:void(0)" onclick="SetHome(this,window.location)">收藏本站</a></li>
+            <li>|</li>
+            <li><a href="javascript:void(0)" onclick="shoucang(document.title,window.location)">设为首页</a></li>
+            <li>|</li>
+            <li><a href="../User/UserRoom.html" target="_blank">个人中心</a></li>
+            <li>|</li>
+            <li><a href="BookCar.html">购物车</a></li>
+            <li>
+                <img src="img/dd_header_shop.gif" alt="shopping" /></li>
+        </ul>
+    </div>
+</div>
+<div class="header_search">
+    <div class="logo">
+        <ul>
+            <li><a href="Index.html">
+                <img src="img/logo3.jpg" /></a></li>
+            <li class="logo_tel">
+                <img src="img/bg_01.gif" /></li>
+        </ul>
+    </div>
+    <div class="search">
+        <div class="search_area">
+            <input type="submit" name="ctl00$header1$btnSearch" value="搜 索" id="header1_btnSearch" class="btn_search" />
+            <div class="search_select">
+                <span class="icon-search"></span>
+            </div>
+            <input name="ctl00$header1$txtKeyword" type="text" id="header1_txtKeyword" value="请输入搜索图书内容" data-default="请输入搜索图书内容" onblur="checkInputBlur($(this))" onfocus="checkInputFocus($(this))" class="search_input" />
+        </div>
+    </div>
+</div>
+<div id="nav" class="nav">
+    
+    <div class='nav_main'>
+        <ul id="navigation">
+            <li><a href="Index.html" class="current"><img  src="img/home142.png" style=" width:auto; height:12px"/> 首 页</a></li>
+            <li onmouseover="displaySubMenu()" onmouseout="hideSubMenu()">
+               <a>图书分类 <img  src="img/thumbnails.png" style=" width:auto; height:12px"/></a> 
+                <ul id="category">
+                    <table id="header1_dlCate" cellspacing="0" style="border-collapse:collapse;">
+	<tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=1'>
+                                    C#高级编程1</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=15'>
+                                    C C+</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=16'>
+                                    VB Script</a></li>
+                            </div>
+                        </td>
+	</tr><tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=17'>
+                                    计算机等级考试1</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=20'>
+                                    计算机理论</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=21'>
+                                    Java </a></li>
+                            </div>
+                        </td>
+	</tr><tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=22'>
+                                    HTML XML</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=25'>
+                                    .NET</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=27'>
+                                    网站开发</a></li>
+                            </div>
+                        </td>
+	</tr><tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=29'>
+                                    ASP.NET</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=31'>
+                                    JSP</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=38'>
+                                    电子商务</a></li>
+                            </div>
+                        </td>
+	</tr>
+</table>
+                </ul>
+
+            </li>
+            <li> <a href="BookList.html">所有图书</a></li>
+            <li><a href="BookList.html?type=1">新书上架</a></li>
+            <li><a href="BookList.html?type=2">特价图书</a></li>
+            <li><a href="#">图书资讯</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+        <span class='icon_hot'></span>
+    </div>
+</div>
+
+        </div>
+        <div id="main">
+            <div class="main_left">
+                <div class="book_sort">
+                    <div class="book_sort_bg">
+                        <img src="img/dd_book_cate_icon.gif" alt="图书" />
+                        图书商品分类
+                    </div>
+                    <div class="book_sort_allcontent">
+                        <table id="dlCategory" cellspacing="0" style="width:100%;border-collapse:collapse;">
+	<tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=1'>
+                                    C#高级编程1</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=15'>
+                                    C C+</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=16'>
+                                    VB Script</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=17'>
+                                    计算机等级考试1</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=20'>
+                                    计算机理论</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=21'>
+                                    Java </a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=22'>
+                                    HTML XML</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=25'>
+                                    .NET</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=27'>
+                                    网站开发</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=29'>
+                                    ASP.NET</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=31'>
+                                    JSP</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=38'>
+                                    电子商务</a></div>
+                            </td>
+	</tr>
+</table>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="main_right">
+                
+    <div class="bookOrder">
+<div style="width:765px"><img src="img/pay_setp_03[1].gif" width="100%" /></div>
+<div class="bookOrder_content">
+<table  style="width:100%">
+<tr>
+<td  colspan="4" style=" padding:15px 0;">
+<div style="  font-size:22px; color:#ec659f;">恭喜，订单提交成功了！</div><br />
+您的订单号：<span id="ContentPlaceHolder1_lblOrderId">14004</span>   您的应付款金额为：￥<span id="ContentPlaceHolder1_lblPrice">49.00</span>元  </td>
+</tr>
+<tr><td style="text-align:left;color:#ec659f;  border:0;">请点击以下银行支付：</td></tr>
+<tr>
+<td>
+<a href="#"><img src="img/bank_abc.gif" /></a>
+<a href="#"><img src="img/bank_bocb2c.gif" /></a>
+<a href="#"><img src="img/bank_ccb.gif" /></a>
+<a href="#"><img src="img/bank_cib.gif" /></a><br />
+
+
+<a href="#"><img src="img/bank_cib.gif" /></a>
+<a href="#"><img src="img/bank_citic.gif" /></a>
+<a href="#"><img src="img/bank_cmb.gif" /></a>
+<a href="#"><img src="img/bank_cmbc.gif" /></a><br />
+
+
+<a href="#"><img src="img/bank_comm.gif" /></a>
+<a href="#"><img src="img/bank_gdb.gif" /></a>
+<a href="#"><img src="img/bank_icbcb2c.gif" /></a>
+<a href="#"><img src="img/bank_sdb.gif" /></a>
+</td></tr>
+<tr><td style="text-align:left;color:#ec659f;  border:0;">请选择以下支付平台支付：</td></tr>
+<tr>
+<td>
+<a href="#"><img src="img/11_04.jpg" /></a>
+<a href="#"><img src="img/11_05.jpg" /></a>
+<a href="#"><img src="img/11_03.jpg" /></a>
+</td>
+</tr>
+</table>
+
+</div>
+ 
+</div>
+
+            </div>
+
+        </div>
+        <div id="footer">
+            
+<link href="css/global.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/template.css" rel="stylesheet" />
+    <link href="css/focus.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/public.js"></script>
+<div class="footer_top"><a href="#" target="_parent" class="footer_dull_red">公司简介</a> | <a href="#" target="_parent" class="footer_dull_red">诚证英才</a> | <a href="#" target="_parent" class="footer_dull_red">网站联盟</a> | <a href="#" target="_parent" class="footer_dull_red">百货招商</a> | <a href="#" target="_parent" class="footer_dull_red">交易条款</a></div>
+<div class="footer_end">
+    Copyright (C) <a href="../Admin/AdminLogin.html" target="_blank">网上书店</a> 2016-2026, All Rights Reserved 
+                <img src="img/validate.gif" alt="版权" style="vertical-align: middle;" />
+    鲁ICP证2016888号 图书销售经营许可证
+</div>
+
+        </div>
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D6A93485" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="dAUl43GHVgEHKC9acAi66YwECfv9huHIwpbhsq6T00fSoXVCNhZF8mWxFGMvuLLrHS9G3GI0tMWgbgKl58w//g56pTpyCsIgJZIjue/JkUoAzvAa5oJJ0LAD95aVlommHJvHkftTRHM5chR0i90KKw==" />
+</div></form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Firefox","requestId":"0d6f7ab9f76c4a17be6e7fd6c43ccc95"}
+</script>
+<script type="text/javascript" src="http://localhost:16604/684f63152dfd463dab384f72747561d2/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>

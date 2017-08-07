@@ -1,0 +1,45 @@
+﻿#frame {
+    position: relative;
+    width: 540px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 5px;
+    float: left;
+    margin-bottom:10px;
+}
+/*#dis{position:absolute;left:-50px;top:-10px;opacity:.5}
+#dis li{display:inline-block;width:200px;height:20px;margin:0 50px;float:left;text-align:center;color:#fff;border-radius:10px;background:#000}*/
+#photos img {
+    float: left;
+    width: 540px;
+    height: 250px;
+}
+
+#photos {
+    position: relative;
+    z-index: 9;
+    width: calc(540px * 4);
+}
+
+.play {
+    animation: ma 5s ease-out infinite alternate;
+}
+
+@keyframes ma {
+    0%,25% {
+        margin-left: 0px;
+    }
+
+    30%,50% {
+        margin-left: -540px;
+    }
+
+    55%,75% {
+        margin-left: -1080px;
+    }
+
+    80%,100% {
+        margin-left: -1620px;
+    }
+}

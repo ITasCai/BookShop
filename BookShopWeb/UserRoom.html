@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+</title>
+<link rel="stylesheet" href="css/pintuer.css" /><link rel="stylesheet" href="css/admin.css" />
+        <script src="js/jquery-1.9.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".leftnav h2").click(function () {
+                    $(this).next().slideToggle(200);
+                    $(this).toggleClass("on");
+                });
+                $(".leftnav ul li a").click(function () {
+                    $("#a_leader_txt").text($(this).text());
+                    $(".leftnav ul li a").removeClass("on");
+                    $(this).addClass("on");
+                });
+            });
+        </script>
+        <style>
+            .menu-top {
+                background: url(img/bg6.jpg);
+                height:70px;
+                overflow:hidden;
+            }
+            .leftnav-title1 { height:50px; background:url(img/left6.jpg);  color:#FFF; padding-left:22px;  font-size:14px; line-height:50px;}
+        </style>
+</head>
+<body>
+ <form method="post" action="./UserRoom.html" id="form1" class="form-x">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="noWigD68LW7UmUvOMOZ9N0PA2fKUn/mN7QeJ9lWlg94uFpGO83MGTdHO5ef3Q+kFGd1biC9eGWOQNcBkJYF4MbN3QXQNhbEHV/9qyg5qPNo5Op34jL36IIvRnjcKm/VEzoN1LbGuej5nhxZsLc8tm0XS4VryuBbQIgoir3UvhmJESLL3MPIYrMq8cV+WmdUA7hVEfAePdRw4KzRIMPc95Pe2EDbk/OxnfxPf7/5jmSd5/ezXQ7qhKO5vsdhUHudJa0s7z2nEwz0xOydUj6JGMw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+        <div class=" menu-top">
+            <div class="logo margin-big-left fadein-top">
+                <h1>
+                    <img src="img/menukey.png" class="radius-circle rotate-hover" height="50" alt="" />用户管理中心
+                </h1>
+            </div>
+            <div class="head-l">
+                <a class="button button-little bg-green" href="../Book/Index.html"><span class="icon-home"></span>前台首页</a>
+                &nbsp;&nbsp;<a href="../Book/BookCar.html" class="button button-little bg-blue"><span class="icon-wrench"></span> 购物车</a>
+                &nbsp;&nbsp;
+                <a id="lbtnExit" class="button button-little bg-red" href="javascript:__doPostBack(&#39;ctl00$lbtnExit&#39;,&#39;&#39;)">退出登录</a>
+            </div>
+        </div>
+        <div class="leftnav">
+            <div class="leftnav-title1"><strong><span class="icon-list"></span>菜单列表</strong></div>
+            <h2><span class="icon-user"></span>信息维护</h2>
+            <ul style="display: block">
+                
+                <li><a href="UserInfo.html" ><span class="icon-caret-right"></span>我的资料</a></li>
+                <li><a href="UserPwd.html" ><span class="icon-caret-right"></span>修改密码</a></li>
+            </ul>
+            <h2><span class="icon-pencil-square-o"></span><a href="UserOrder.html">我的订单</a></h2>
+         
+            
+            
+                
+        
+        </div>
+        <ul class="bread">
+            <li><a href="http://www.baidu.com" class="icon-home">首页</a></li>
+            <li><a href="##" id="a_leader_txt">网站信息</a></li>
+            <li><b>欢迎您！</b><span style="color: red;"><span id="labname" style="font-weight: 700; color: #669900">jiaoke</span></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当前时间：<span style="color: red;"><span id="lblTime">2017/8/7 星期一 上午 7:10:58</span></span> </li>
+        </ul>
+        <div class="admin" style="height:700px">
+            
+            
+    
+     <table align="center"
+                    style="border-style: dotted; width: 361px; height: 219px;">
+                    <tr>
+                        <td bgcolor="#99FF99"  style="text-align: center" class="style29">
+                            &nbsp;&nbsp;
+                            用户【<span id="ContentPlaceHolder1_labname" style="font-weight: 700; color: #669900">jiaoke</span>】登录成功</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">
+                            <img id="ContentPlaceHolder1_Image1" src="img/Welcome.gif" />
+                        </td>
+                    </tr>
+                </table>
+
+        </div>
+        
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E0A4F479" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="3TgVYKML9PwQZPudJhnbVznE70jZuBMX5hT+aDL9R1S7kW2FaP8/kyDbTZfwL8Lf44P3mYDOezM2CFmAK5n56zKzAAH+g363uOr2yCaLBbjIeoui0txaBkJcZSpx2Fzg" />
+</div></form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Firefox","requestId":"001d2e238efd47ecab72ff80d7f9ef6c"}
+</script>
+<script type="text/javascript" src="http://localhost:16604/684f63152dfd463dab384f72747561d2/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+﻿  .register-content {
+            margin: 0 auto;
+            padding: 0 10px;
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            position: absolute;
+            background: url(../images/bg11.jpg);
+        }
+
+        .register-container {
+            display: block;
+            margin: 0 auto;
+            padding: 0 10px;
+            width: 45%;
+        }
+
+        .label-w {
+            width: 20%;
+        }
+
+        .winput {
+            width: 300px;
+            float: left;
+        }
+
+        .high {
+            color: red;
+        }
+
+        .mytext {
+            border: 1px solid #6699cc;
+            background-color: White;
+        }
+
+        .mytextclick {
+            border: 1px solid #6699cc;
+            background-color: #D4EDFF;
+        }

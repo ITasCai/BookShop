@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	用户注册
+</title><link rel="stylesheet" href="css/admin.css" /><link rel="stylesheet" href="css/pintuer.css" /><link rel="stylesheet" href="css/register.css" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/pintuer.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/address.js"></script>
+    <script>
+        //$(function () {
+        //    for (var i = 0; i < provinceList.length; i++) {
+        //        var option = $("<option>" + provinceList[i].name + "</option>");
+        //        option.prop("cities", provinceList[i].cityList);
+        //        $("#province").append(option);
+        //    }
+        //    changeProvince();
+        //    changeCity();
+        //    $("#province").on("change", changeProvince);
+        //    $("#city").on("change", changeCity);
+        //});
+        //function changeProvince() {
+        //    $("#city").empty();
+        //    var cities = $("#province").find("option:selected").prop("cities");
+        //    for (var i = 0; i < cities.length; i++) {
+        //        var option = $("<option>" + cities[i].name + "</option>");
+        //        option.prop("area", cities[i].areaList);
+        //        $("#city").append(option);
+        //    }
+        //    changeCity();
+        //}
+        //function changeCity() {
+        //    $("#area").empty();
+        //    var area = $("#city").find("option:selected").prop("area");
+        //    for (var i = 0; i < area.length; i++) {
+        //        var option = $("<option>" + area[i] + "</option>");
+        //        $("#area").append(option);
+        //    }
+        //}
+    </script>
+
+</head>
+<body onload="getFocus()">
+    <form method="post" action="./UserRegister.html" id="form1" class="form-x">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="LFXaCvlU4IxArrF+v7sq91TWKSh3SoW02gXVzQrOfmb/VYHDYDkzMIrzgAjgW/CTct6WrJlllNHM6u7cw9Y1Qv8k4bJ0tmYZGURGfdQ//ZVIW69e0QinhjAvziuqTUqs" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMaopRV5Hsrgs3jHpuEWFjtLO7ddtlpHu6wmJ_kguUedYm7EjnlhAFTK2W2HD_ca4Q2&amp;t=636255676860000000" type="text/javascript"></script>
+
+        <div class="register-content">
+            <div class="register-container">
+                <div style="height: 10px;"></div>
+                <div class="panel loginbox">
+                    <div class="text-center">
+                        <h1>
+                            <img id="Image1" src="img/userkey.png" style="height:30px;" />
+                            用户注册</h1>
+                    </div>
+                    <div class="panel-body" style="padding: 30px; padding-bottom: 10px; padding-top: 0px;">
+                        <div class="form-group">
+                            <div class="label">
+
+                                <span id="lblLoginId">用户名：</span>
+                            </div>
+                            <div class="field">
+                                <input name="txtLoginId" type="text" maxlength="16" id="txtLoginId" class="input winput mytext" onfocus="this.className=&#39;input winput mytextclick &#39;" onblur="this.className=&#39;input winput mytext&#39;;CheckUserName();" placeholder="6-16位以字母开头,下划线或数字" />
+                                <div id="ErrorId"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <span id="lblName">真实姓名：</span>
+                            </div>
+                            <div class="field">
+                                <input name="txtName" type="text" maxlength="7" id="txtName" class="input winput mytext" onfocus="this.className=&#39;input winput mytextclick&#39;" placeholder="只能是中文,长度为2-7位" onblur="this.className=&#39;input winput mytext&#39;;CheckName();" />
+                                <div id="ErrorName"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <span id="lblPwd">密码：</span>
+                            </div>
+                            <div class="field">
+                                <input name="txtPwd" type="password" maxlength="6" id="txtPwd" class="input winput mytext" onfocus="this.className=&#39;input winput mytextclick&#39;" placeholder="密码长度为6位数字或者字母" onblur="this.className=&#39;input winput mytext&#39;;CheckPassword();" />
+                                <div id="ErrorPassword"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <span id="lblSurePwd">确认密码：</span>
+                            </div>
+                            <div class="field">
+                                <input name="txtSurePwd" type="password" maxlength="6" id="txtSurePwd" class="input winput mytext" onfocus="this.className=&#39;input winput mytextclick&#39;" onblur="this.className=&#39;input winput mytext&#39;;CheckSurePassword();" />
+                                <div id="ErrorSurePassword"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <span id="lblMail">邮箱：</span>
+                            </div>
+                            <div class="field">
+                                <input name="txtMail" type="text" maxlength="40" id="txtMail" class="input winput mytext" onfocus="this.className=&#39;input winput mytextclick &#39;" onblur="this.className=&#39;input winput mytext&#39;;CheckEamil();" placeholder="例:zhangsan@exam.com" />
+                                <div id="ErrorEmail"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <span id="lblPhone">手机号：</span>
+                            </div>
+                            <div class="field">
+                                <input name="txtPhone" type="text" maxlength="12" id="txtPhone" class="input winput mytext" onfocus="this.className=&#39;input winput mytextclick &#39;" onblur="this.className=&#39;input winput mytext&#39;;CheckPhone();" placeholder="例:18666888866" />
+                                <div id="ErrorPhone"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <span id="lblAddress">收货地址：</span>
+                            </div>
+                            <div class="field">
+                                <input name="txtAddress" type="text" maxlength="50" id="txtAddress" class="input winput mytext" onfocus="this.className=&#39;input winput mytextclick &#39;" onblur="this.className=&#39;input winput mytext&#39;;CheckAddress();" placeholder="例:山东省济宁市高新区产学研基地D1三层" />
+                                <div id="ErrorAddress"></div>
+                                
+                            </div>
+                        </div>
+                        <div style="padding: 10px 90px 30px 100px;">
+                            <input type="submit" name="btnOK" value="立马注册" onclick="return CheckAll();" id="btnOK" class="button bg-main" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a id="lbtnBack" class="button bg-red" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbtnBack&quot;, &quot;&quot;, false, &quot;&quot;, &quot;../Book/Index.html&quot;, false, true))">返回首页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3C616085" />
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="PzCIwa9oznpMiAVUmf1XhL80FObk6WwJzDvSA4JSUqos0Ccqk4u3aCNRWU8lXZnrBsA98T30mVweFQX6eI24x7kxTstGn3-t6bG50E7qxZw1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="eexUxKEYsuJjQh8dUUN/dMBuVkcUHYoYCunzyukpQyF9W6yK0sbytxeZX1f0qx24/Lh22b3CjBTl+pnP8gJkkxoi2rkA8NggoJtwqqMMsYz0f1oKYxPairWvTs4zhVPFsCKSJfzIs8Y1c8NtPT71nGUaUTMCNCEnEwJxcPKuNbFywFA+BjeoCoQvL5KUOudmtgzugpUK6N7SD1/xMV8mrxQW/jn7tKUEpsiUt7NtsKCWvZE6AWvO1ph1n7vwF67o04vDfs/xzZf0fMQ35UXmURivxaRbSM+EvbahnGXCXbA=" />
+</div></form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Firefox","requestId":"d1731ee8af544d2dadf6ca7025d2c1f9"}
+</script>
+<script type="text/javascript" src="http://localhost:16604/684f63152dfd463dab384f72747561d2/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>

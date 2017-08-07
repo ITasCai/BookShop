@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+</title>
+<link rel="stylesheet" href="css/pintuer.css" /><link rel="stylesheet" href="css/admin.css" />
+        <script src="js/jquery-1.9.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".leftnav h2").click(function () {
+                    $(this).next().slideToggle(200);
+                    $(this).toggleClass("on");
+                });
+                $(".leftnav ul li a").click(function () {
+                    $("#a_leader_txt").text($(this).text());
+                    $(".leftnav ul li a").removeClass("on");
+                    $(this).addClass("on");
+                });
+            });
+        </script>
+        <style>
+            .menu-top {
+                background: url(img/bg6.jpg);
+                height:70px;
+                overflow:hidden;
+            }
+            .leftnav-title1 { height:50px; background:url(img/left6.jpg);  color:#FFF; padding-left:22px;  font-size:14px; line-height:50px;}
+        </style>
+</head>
+<body>
+ <form method="post" action="./UserInfo.html" onsubmit="javascript:return WebForm_OnSubmit();" id="form1" class="form-x">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="+RF+SRjwATBRrR8uxuDLOy1Lqcz7drO811vbzg5pqiWH4OyJEbtckgBytzZ222QfnMpzAu9Q2cd4pEQB5El1hWEy9gKR2TLqgcuTY5uMOib9zhKwdzKWIhxkLtQXMPh44nNek6gaNxhG3WnXipLaY1FXB/sVccufI8ZoYae2uqXdlNARXh9KofYnQaWvi4riNb4fmzJOyKQATqoOpDngaiMVjSUgZd7fUjjoRw9YF2ugfSwb+eZ8H086Bj7eSvHkIclpLb/qguFw/8jv1/revg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMaopRV5Hsrgs3jHpuEWFjtLO7ddtlpHu6wmJ_kguUedYm7EjnlhAFTK2W2HD_ca4Q2&amp;t=636255676860000000" type="text/javascript"></script>
+
+
+<script src="/scripts/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakFtUIpNsAL4uGNQSKpcpEVhv9VqmACWGr2OnSIlTNDXzO0oUe_7n2bJ0tL2NYTRGKog6cWCQRyW6d-kmi7MNs5k1&amp;t=636255676860000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+        <div class=" menu-top">
+            <div class="logo margin-big-left fadein-top">
+                <h1>
+                    <img src="img/menukey.png" class="radius-circle rotate-hover" height="50" alt="" />用户管理中心
+                </h1>
+            </div>
+            <div class="head-l">
+                <a class="button button-little bg-green" href="../Book/Index.html"><span class="icon-home"></span>前台首页</a>
+                &nbsp;&nbsp;<a href="../Book/BookCar.html" class="button button-little bg-blue"><span class="icon-wrench"></span> 购物车</a>
+                &nbsp;&nbsp;
+                <a id="lbtnExit" class="button button-little bg-red" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$lbtnExit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">退出登录</a>
+            </div>
+        </div>
+        <div class="leftnav">
+            <div class="leftnav-title1"><strong><span class="icon-list"></span>菜单列表</strong></div>
+            <h2><span class="icon-user"></span>信息维护</h2>
+            <ul style="display: block">
+                
+                <li><a href="UserInfo.html" ><span class="icon-caret-right"></span>我的资料</a></li>
+                <li><a href="UserPwd.html" ><span class="icon-caret-right"></span>修改密码</a></li>
+            </ul>
+            <h2><span class="icon-pencil-square-o"></span><a href="UserOrder.html">我的订单</a></h2>
+         
+            
+            
+                
+        
+        </div>
+        <ul class="bread">
+            <li><a href="http://www.baidu.com" class="icon-home">首页</a></li>
+            <li><a href="##" id="a_leader_txt">网站信息</a></li>
+            <li><b>欢迎您！</b><span style="color: red;"><span id="labname" style="font-weight: 700; color: #669900">jiaoke</span></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当前时间：<span style="color: red;"><span id="lblTime">2017/8/7 星期一 上午 7:14:29</span></span> </li>
+        </ul>
+        <div class="admin" style="height:700px">
+            
+            
+    <div class="panel admin-panel">
+        <div class="panel-head" id="add">
+            <strong><span class="icon-pencil-square-o"></span>
+                <span id="ContentPlaceHolder1_lblRem">信息维护</span>
+                
+            </strong>
+        </div>
+        <div class="body-content">
+            <div class="form-group">
+                <div class="label">
+                    <span id="ContentPlaceHolder1_lblName">姓名：</span>
+                </div>
+                <div class="field">
+                    <input name="ctl00$ContentPlaceHolder1$txtName" type="text" value="教课" maxlength="15" id="ContentPlaceHolder1_txtName" class="input w50" />
+                    <span data-val-controltovalidate="ContentPlaceHolder1_txtName" data-val-errormessage="*姓名不为空" id="ContentPlaceHolder1_RequiredFieldValidator5" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;visibility:hidden;">*姓名不为空</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <span id="ContentPlaceHolder1_lblPhone">电话：</span>
+                </div>
+                <div class="field">
+                    <input name="ctl00$ContentPlaceHolder1$txtPhone" type="text" value="18666666666" maxlength="11" id="ContentPlaceHolder1_txtPhone" class="input w50" />
+                    <span data-val-controltovalidate="ContentPlaceHolder1_txtPhone" data-val-errormessage="*电话不能为空" data-val-display="Dynamic" id="ContentPlaceHolder1_RequiredFieldValidator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*电话不能为空</span>
+                        <span data-val-controltovalidate="ContentPlaceHolder1_txtPhone" data-val-errormessage="电话格式不正确" data-val-display="Dynamic" id="ContentPlaceHolder1_RegularExpressionValidator1" data-val="true" data-val-evaluationfunction="RegularExpressionValidatorEvaluateIsValid" data-val-validationexpression="(^(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$)|(^((\(\d{3}\))|(\d{3}\-))?(1[358]\d{9})$)" style="color:Red;display:none;">电话格式不正确</span>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <span id="ContentPlaceHolder1_lblEmail">邮箱：</span>
+                </div>
+                <div class="field">
+                    <input name="ctl00$ContentPlaceHolder1$txtEmail" type="text" value="598581180@qq.com" maxlength="50" id="ContentPlaceHolder1_txtEmail" class="input w50" />
+                   <span data-val-controltovalidate="ContentPlaceHolder1_txtEmail" data-val-errormessage="请输入客户邮箱" data-val-display="Dynamic" id="ContentPlaceHolder1_RequiredFieldValidator4" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">请输入客户邮箱</span>
+                        <span data-val-controltovalidate="ContentPlaceHolder1_txtEmail" data-val-errormessage="输入邮箱格式不正确" data-val-display="Dynamic" id="ContentPlaceHolder1_RegularExpressionValidator2" data-val="true" data-val-evaluationfunction="RegularExpressionValidatorEvaluateIsValid" data-val-validationexpression="\w+([-+.&#39;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" style="color:Red;display:none;">输入邮箱格式不正确</span>
+                    <div class="tips"></div>
+                </div>
+            </div>
+             <div class="form-group">
+                <div class="label">
+                    <span id="ContentPlaceHolder1_lblAddress">收货地址：</span>
+                </div>
+                <div class="field">
+                    <input name="ctl00$ContentPlaceHolder1$txtAddress" type="text" value="山东" id="ContentPlaceHolder1_txtAddress" class="input w50" style="width:400px;" />
+                    <span data-val-controltovalidate="ContentPlaceHolder1_txtAddress" data-val-errormessage="*收货地址不能为空" id="ContentPlaceHolder1_RequiredFieldValidator3" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;visibility:hidden;">*收货地址不能为空</span>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnOK" value="提交" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnOK&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_btnOK" class="button bg-main" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D268A6CF" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="FMiOz1Sfk7qU9DVaVb2c9IhRYWHh3QLmhwzDz+u1SzcpkTB2cBlTQ1pN+SZ3UmXD6QLRmkPugGs2A/SAAI97lwtUBDzaOiBJFdfCtCmjdsnXPnsQ6FnVtihG4Cxg0WDGANo50Cnuz8cOFyi1DhBOLi8XkKKqhcP0wy2XEiOCfO1DKSqnWlquIjvmNsUYaGedxEvMIPnhG8UwflBzhwbjNMm7jCs/U9GV8kZPzNGQ0AM=" />
+</div></form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Firefox","requestId":"cebb3700e00245339eed46a083ba3a2f"}
+</script>
+<script type="text/javascript" src="http://localhost:16604/684f63152dfd463dab384f72747561d2/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>

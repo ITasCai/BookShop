@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+</title>
+    <link rel="stylesheet" href="css/pages.css" />
+<link href="css/global.css" rel="stylesheet" /><link href="css/layout.css" rel="stylesheet" /><link href="css/template.css" rel="stylesheet" /><link href="css/focus.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/public.js"></script>
+
+</head>
+<body onload="startclock();">
+    <form method="post" action="./BookList.html" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+        <div id="header">
+            
+<link href="css/global.css" rel="stylesheet" />
+<link href="css/layout.css" rel="stylesheet" />
+<link href="css/template.css" rel="stylesheet" />
+<link href="css/focus.css" rel="stylesheet" />
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    function displaySubMenu(li) {
+        //var subMenu = li.getElementsByTagName("ul")[0];
+        var subMenu = document.getElementById("category");
+        subMenu.style.display = "block";
+    }
+    function hideSubMenu(li) {
+        //var subMenu = li.getElementsByTagName("ul")[0];
+        var subMenu = document.getElementById("category");
+        subMenu.style.display = "none";
+    }
+</script>
+<div class="header_top">
+    <div class="header_top_left">
+        <span id="header1_lblUser" style="color:Red;">jiaoke</span>
+        您好,欢迎光临! [  <a href="../User/UserRegister.html">免费注册 </a>]
+                       <span>&nbsp;<label id="lblTime" style="color: red;"></label></span>
+    </div>
+    <div class="header_top_right">
+        <ul>
+            <li><a href="#" target="_self">帮助</a></li>
+            <li>|</li>
+            <li><a href="javascript:void(0)" onclick="SetHome(this,window.location)">收藏本站</a></li>
+            <li>|</li>
+            <li><a href="javascript:void(0)" onclick="shoucang(document.title,window.location)">设为首页</a></li>
+            <li>|</li>
+            <li><a href="../User/UserRoom.html" target="_blank">个人中心</a></li>
+            <li>|</li>
+            <li><a href="BookCar.html">购物车</a></li>
+            <li>
+                <img src="img/dd_header_shop.gif" alt="shopping" /></li>
+        </ul>
+    </div>
+</div>
+<div class="header_search">
+    <div class="logo">
+        <ul>
+            <li><a href="Index.html">
+                <img src="img/logo3.jpg" /></a></li>
+            <li class="logo_tel">
+                <img src="img/bg_01.gif" /></li>
+        </ul>
+    </div>
+    <div class="search">
+        <div class="search_area">
+            <input type="submit" name="ctl00$header1$btnSearch" value="搜 索" id="header1_btnSearch" class="btn_search" />
+            <div class="search_select">
+                <span class="icon-search"></span>
+            </div>
+            <input name="ctl00$header1$txtKeyword" type="text" id="header1_txtKeyword" value="请输入搜索图书内容" data-default="请输入搜索图书内容" onblur="checkInputBlur($(this))" onfocus="checkInputFocus($(this))" class="search_input" />
+        </div>
+    </div>
+</div>
+<div id="nav" class="nav">
+    
+    <div class='nav_main'>
+        <ul id="navigation">
+            <li><a href="Index.html" class="current"><img  src="img/home142.png" style=" width:auto; height:12px"/> 首 页</a></li>
+            <li onmouseover="displaySubMenu()" onmouseout="hideSubMenu()">
+               <a>图书分类 <img  src="img/thumbnails.png" style=" width:auto; height:12px"/></a> 
+                <ul id="category">
+                    <table id="header1_dlCate" cellspacing="0" style="border-collapse:collapse;">
+	<tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=1'>
+                                    C#高级编程1</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=15'>
+                                    C C+</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=16'>
+                                    VB Script</a></li>
+                            </div>
+                        </td>
+	</tr><tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=17'>
+                                    计算机等级考试1</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=20'>
+                                    计算机理论</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=21'>
+                                    Java </a></li>
+                            </div>
+                        </td>
+	</tr><tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=22'>
+                                    HTML XML</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=25'>
+                                    .NET</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=27'>
+                                    网站开发</a></li>
+                            </div>
+                        </td>
+	</tr><tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=29'>
+                                    ASP.NET</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=31'>
+                                    JSP</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=38'>
+                                    电子商务</a></li>
+                            </div>
+                        </td>
+	</tr>
+</table>
+                </ul>
+
+            </li>
+            <li> <a href="BookList.html">所有图书</a></li>
+            <li><a href="BookList.html?type=1">新书上架</a></li>
+            <li><a href="BookList.html?type=2">特价图书</a></li>
+            <li><a href="#">图书资讯</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+        <span class='icon_hot'></span>
+    </div>
+</div>
+
+        </div>
+        <div id="main">
+            <div class="main_left">
+                <div class="book_sort">
+                    <div class="book_sort_bg">
+                        <img src="img/dd_book_cate_icon.gif" alt="图书" />
+                        图书商品分类
+                    </div>
+                    <div class="book_sort_allcontent">
+                        <table id="dlCategory" cellspacing="0" style="width:100%;border-collapse:collapse;">
+	<tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=1'>
+                                    C#高级编程1</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=15'>
+                                    C C+</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=16'>
+                                    VB Script</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=17'>
+                                    计算机等级考试1</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=20'>
+                                    计算机理论</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=21'>
+                                    Java </a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=22'>
+                                    HTML XML</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=25'>
+                                    .NET</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=27'>
+                                    网站开发</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=29'>
+                                    ASP.NET</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=31'>
+                                    JSP</a></div>
+                            </td>
+	</tr><tr>
+		<td>
+                                <div class="book_cate"><a href='CategoryList.html?categoryId=38'>
+                                    电子商务</a></div>
+                            </td>
+	</tr>
+</table>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="main_right">
+                
+    <div class="current_place">
+        您现在的位置：<a href="Index.html">网上书店</a> >> 图书列表 >>
+        <span id="ContentPlaceHolder1_lblCurrent">所有图书</span>
+    </div>
+    <div class="bookList">
+        <div class="bookList_sort">
+            <ul>
+                <li>按条件排序：</li>
+                <li>
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnSortDate" value="日期排序" id="ContentPlaceHolder1_btnSortDate" style="background-color:#BBE188;" /></li>
+                <li>
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnSortPrice" value="价格排序" id="ContentPlaceHolder1_btnSortPrice" style="background-color:#FFCC66;" /></li>
+                <li>
+                    <select name="ctl00$ContentPlaceHolder1$ddlsort" id="ContentPlaceHolder1_ddlsort" style="height:22px;width:75px;">
+	<option selected="selected" value="0">--升序--</option>
+	<option value="1">--降序--</option>
+
+</select></li>
+            </ul>
+
+            
+        </div>
+        <div class="bookList_content">
+            <table id="ContentPlaceHolder1_dlBookList" cellspacing="0" style="width:100%;border-collapse:collapse;">
+	<tr>
+		<td>
+                    <div class="bookList_content_left">
+                        <img id="ContentPlaceHolder1_dlBookList_imgCover_0" src="img/BookCovers/9787115155108.jpg" style="height:130px;width:100px;" />
+                    </div>
+                    <div class="bookList_content_right">
+                        <ul>
+                            <li class="bookList_content_bookTitle">图书名称:
+                                <a href='BookDetails.html?bookId=4942' class="blue_size">C++ Primer 习题解答（第4版）</a></li>
+                            <li>作者:蒋爱军，李师贤，梅晓勇  著</li>
+                            <li>出版社:三秦出版社</li>
+                            <li>出版时间:2007年02月01日</li>
+                            <li>图书价格:<span style="color: red; font-weight: bold">¥45.00元</span></li>
+                            <li>
+                                <p>C++ Primer(第4版)是C++大师Stanley B. Lippman丰富的实践经验和C++标准委员会原负责人J...</p>
+                            </li>
+                        </ul>
+                        <dl class="bookList_content_dd">
+                            <dd>
+                                <a style="color:white;text-decoration:none" href='BookDetails.html?bookId=4942'>
+                                    <img id="ContentPlaceHolder1_dlBookList_Image1_0" src="img/product_buy_01.gif" />
+                                    
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bookList_content_bottom"></div>
+                </td>
+	</tr><tr>
+		<td>
+                    <div class="bookList_content_left">
+                        <img id="ContentPlaceHolder1_dlBookList_imgCover_1" src="img/BookCovers/978711515888.jpg" style="height:130px;width:100px;" />
+                    </div>
+                    <div class="bookList_content_right">
+                        <ul>
+                            <li class="bookList_content_bookTitle">图书名称:
+                                <a href='BookDetails.html?bookId=4943' class="blue_size">Effective C# 中文版</a></li>
+                            <li>作者:（美）瓦格纳  著，李建忠  译</li>
+                            <li>出版社:人民邮电出版社</li>
+                            <li>出版时间:2007年05月01日</li>
+                            <li>图书价格:<span style="color: red; font-weight: bold">¥49.00元</span></li>
+                            <li>
+                                <p><p>本书围绕一些关于C#和.NET的重要主题，包括C#语言元素、.NET资源管理、使用C#表达设计、创建二进制组件和使...</p>
+                            </li>
+                        </ul>
+                        <dl class="bookList_content_dd">
+                            <dd>
+                                <a style="color:white;text-decoration:none" href='BookDetails.html?bookId=4943'>
+                                    <img id="ContentPlaceHolder1_dlBookList_Image1_1" src="img/product_buy_01.gif" />
+                                    
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bookList_content_bottom"></div>
+                </td>
+	</tr><tr>
+		<td>
+                    <div class="bookList_content_left">
+                        <img id="ContentPlaceHolder1_dlBookList_imgCover_2" src="img/BookCovers/9787111128069.jpg" style="height:130px;width:100px;" />
+                    </div>
+                    <div class="bookList_content_right">
+                        <ul>
+                            <li class="bookList_content_bookTitle">图书名称:
+                                <a href='BookDetails.html?bookId=4944' class="blue_size">C程序设计语言（第2版·新版）</a></li>
+                            <li>作者:（美）克尼汉，（美）里奇 著，徐宝文，李志 译</li>
+                            <li>出版社:机械工业出版社</li>
+                            <li>出版时间:2004年01月01日</li>
+                            <li>图书价格:<span style="color: red; font-weight: bold">¥30.00元</span></li>
+                            <li>
+                                <p>本书是由C语言的设计者Brian W.Kernighan和Dennis M.Ritchie编写的一部介绍标准C语言及其程...</p>
+                            </li>
+                        </ul>
+                        <dl class="bookList_content_dd">
+                            <dd>
+                                <a style="color:white;text-decoration:none" href='BookDetails.html?bookId=4944'>
+                                    <img id="ContentPlaceHolder1_dlBookList_Image1_2" src="img/product_buy_01.gif" />
+                                    
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bookList_content_bottom"></div>
+                </td>
+	</tr><tr>
+		<td>
+                    <div class="bookList_content_left">
+                        <img id="ContentPlaceHolder1_dlBookList_imgCover_3" src="img/BookCovers/9787115134165.jpg" style="height:130px;width:100px;" />
+                    </div>
+                    <div class="bookList_content_right">
+                        <ul>
+                            <li class="bookList_content_bookTitle">图书名称:
+                                <a href='BookDetails.html?bookId=4945' class="blue_size">C++Primer Plus（第五版）中文版</a></li>
+                            <li>作者:[美]普拉塔（Prata,S.）  著，孙建春，韦强  译</li>
+                            <li>出版社:人民邮电出版社</li>
+                            <li>出版时间:2005年05月01日</li>
+                            <li>图书价格:<span style="color: red; font-weight: bold">¥72.00元</span></li>
+                            <li>
+                                <p>C++是在C语言基础上开发的一种集面向对象编程、通用编程和传统的过程化编程于一体的编程语言，是C语言的超集。本书是根据2...</p>
+                            </li>
+                        </ul>
+                        <dl class="bookList_content_dd">
+                            <dd>
+                                <a style="color:white;text-decoration:none" href='BookDetails.html?bookId=4945'>
+                                    <img id="ContentPlaceHolder1_dlBookList_Image1_3" src="img/product_buy_01.gif" />
+                                    
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bookList_content_bottom"></div>
+                </td>
+	</tr><tr>
+		<td>
+                    <div class="bookList_content_left">
+                        <img id="ContentPlaceHolder1_dlBookList_imgCover_4" src="img/BookCovers/9787302114642.jpg" style="height:130px;width:100px;" />
+                    </div>
+                    <div class="bookList_content_right">
+                        <ul>
+                            <li class="bookList_content_bookTitle">图书名称:
+                                <a href='BookDetails.html?bookId=4947' class="blue_size">C++程序设计教程（第二版）</a></li>
+                            <li>作者:钱能  著</li>
+                            <li>出版社:清华大学出版社</li>
+                            <li>出版时间:2005年09月01日</li>
+                            <li>图书价格:<span style="color: red; font-weight: bold">¥39.50元</span></li>
+                            <li>
+                                <p>本书是《C++程序设计教程》的第二版。然而从指导思想、内容结构、写作特点等方面，都以全新的面貌呈现于读者。全书全部重新执...</p>
+                            </li>
+                        </ul>
+                        <dl class="bookList_content_dd">
+                            <dd>
+                                <a style="color:white;text-decoration:none" href='BookDetails.html?bookId=4947'>
+                                    <img id="ContentPlaceHolder1_dlBookList_Image1_4" src="img/product_buy_01.gif" />
+                                    
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bookList_content_bottom"></div>
+                </td>
+	</tr><tr>
+		<td>
+                    <div class="bookList_content_left">
+                        <img id="ContentPlaceHolder1_dlBookList_imgCover_5" src="img/BookCovers/9787560924182.jpg" style="height:130px;width:100px;" />
+                    </div>
+                    <div class="bookList_content_right">
+                        <ul>
+                            <li class="bookList_content_bookTitle">图书名称:
+                                <a href='BookDetails.html?bookId=4948' class="blue_size">深度探索 C++ 对象模型</a></li>
+                            <li>作者:（美）Stanley B. Lippman  著，侯捷  译</li>
+                            <li>出版社:化学工业出版社</li>
+                            <li>出版时间:2001年05月01日</li>
+                            <li>图书价格:<span style="color: red; font-weight: bold">¥54.00元</span></li>
+                            <li>
+                                <p>本书重点：探索“对象导向程序所支持的C++对象模型”下的程序行为。对于“对象导向性质之基础实现技术”以及“各种性质背后的...</p>
+                            </li>
+                        </ul>
+                        <dl class="bookList_content_dd">
+                            <dd>
+                                <a style="color:white;text-decoration:none" href='BookDetails.html?bookId=4948'>
+                                    <img id="ContentPlaceHolder1_dlBookList_Image1_5" src="img/product_buy_01.gif" />
+                                    
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bookList_content_bottom"></div>
+                </td>
+	</tr>
+</table>
+        </div>
+        <div class="bookList_paging">
+            
+<!-- AspNetPager 7.5.1 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+<script type="text/javascript" src="/WebResource.axd?d=xUbagW6sd8D2s7ean6fOVJJ05SlQYa25q3Q0CZuLHoM1VdWTVSdREE-OFhDnP6i6ECBzJ5XEIBcWzDLTWFG908hPh083b_d6dwNboo65Q4y9yrmZ48TGzurBO79rm9Xk0&t=504911520000000000"></script>
+<div id="ContentPlaceHolder1_AspNetPager1" class="pages" style="text-align:center;width:100%;">
+<a disabled="disabled" style="margin-right:10px;">首页</a>
+<a disabled="disabled" style="margin-right:10px;">上一页</a>
+<span class="cpb" style="margin-right:10px;">1</span>
+<a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','2')" style="margin-right:10px;">2</a>
+<a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','3')" style="margin-right:10px;">3</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','4')" style="margin-right:10px;">4</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','5')" style="margin-right:10px;">5</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','6')" style="margin-right:10px;">6</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','7')" style="margin-right:10px;">7</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','8')" style="margin-right:10px;">8</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','9')" style="margin-right:10px;">9</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','10')" style="margin-right:10px;">10</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','11')" style="margin-right:10px;">...</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','178')" style="margin-right:10px;">178</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','2')" style="margin-right:10px;">下一页</a><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$AspNetPager1','178')" style="margin-right:10px;">尾页</a>
+&nbsp;&nbsp;
+</div>
+<!-- AspNetPager 7.5.1 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+
+
+
+        </div>
+    </div>
+
+            </div>
+
+        </div>
+        <div id="footer">
+            
+<link href="css/global.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/template.css" rel="stylesheet" />
+    <link href="css/focus.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/public.js"></script>
+<div class="footer_top"><a href="#" target="_parent" class="footer_dull_red">公司简介</a> | <a href="#" target="_parent" class="footer_dull_red">诚证英才</a> | <a href="#" target="_parent" class="footer_dull_red">网站联盟</a> | <a href="#" target="_parent" class="footer_dull_red">百货招商</a> | <a href="#" target="_parent" class="footer_dull_red">交易条款</a></div>
+<div class="footer_end">
+    Copyright (C) <a href="../Admin/AdminLogin.html" target="_blank">网上书店</a> 2016-2026, All Rights Reserved 
+                <img src="img/validate.gif" alt="版权" style="vertical-align: middle;" />
+    鲁ICP证2016888号 图书销售经营许可证
+</div>
+
+        </div>
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="38120C5E" />
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="rz7NVit8lFpfG82U5FsYfBjv9lZlF7Mg9QdaMOQPL597QnjQaRSEExCcQmBVGV350WDP3+vlSpgPgZw5SlzHPVnErLpdRctZY5NcKgbvtkG/rJJhkcNpgUhaqwg4zYRZlvwgOPXIz+1oMCEY05Sw7uOVVRvHmLwVRMl/KuNKNM+ibXVv69SqO1J7zTSLwq8JKpY7zQ4env7Z16KqXDGJKAxkPz6AEjngu7v3f65oJ8E=" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+</form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Firefox","requestId":"3e8d2517d58a4857924586c570ba5085"}
+</script>
+<script type="text/javascript" src="http://localhost:16604/684f63152dfd463dab384f72747561d2/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>

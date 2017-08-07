@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	网上书店
+</title><link href="css/global.css" rel="stylesheet" />
+<link href="css/layout.css" rel="stylesheet" />
+<link href="css/template.css" rel="stylesheet" />
+<link href="css/focuspic.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/focus.js"></script>
+
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $.post(
+               "ashx/NewestBookShow.ashx",
+           {
+           },
+           function (data, status) {
+               if (status == "success") {
+                
+                    $("#dlNewsBook").html(data);
+               }
+           }
+         )
+
+
+
+            $.post(
+             "ashx/SpecialBookShow.ashx",
+         {
+         },
+         function (data, status) {
+             if (status == "success") {
+
+                 $("#dlSpecialBook").html(data);
+             }
+         }
+       )
+
+        })
+    </script>
+    <style>
+        body {
+            
+        }
+    </style>
+
+</head>
+<body onload="startclock();">
+    <form method="post" action="./Index.html" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"  />
+</div>
+
+        <div id="header">
+            
+            <link href="css/layout.css" rel="stylesheet" />
+            <link href="css/template.css" rel="stylesheet" />
+            <link href="css/focuspic.css" rel="stylesheet" />
+            <script src="js/jquery-1.9.1.js"></script>
+            <script src="js/public.js"></script>
+            <script src="js/focus.js"></script>
+            <script>
+    function displaySubMenu(li) {
+        //var subMenu = li.getElementsByTagName("ul")[0];
+        var subMenu = document.getElementById("category");
+        subMenu.style.display = "block";
+    }
+    function hideSubMenu(li) {
+        //var subMenu = li.getElementsByTagName("ul")[0];
+        var subMenu = document.getElementById("category");
+        subMenu.style.display = "none";
+    }
+</script>
+<div class="header_top">
+    <div class="header_top_left">
+        <span id="header1_lblUser" style="color:Red;"></span>
+        您好,欢迎光临! [ <a href="UserLogin.html" id="header1_show" target="_parent">登录 |</a> <a href="UserRegister.html">免费注册 </a>]
+                       <span>&nbsp;<label id="lblTime" style="color: red;"></label></span>
+    </div>
+    <div class="header_top_right">
+        <ul>
+            <li><a href="#" target="_self">帮助</a></li>
+            <li>|</li>
+            <li><a href="javascript:void(0)" onclick="SetHome(this,window.location)">收藏本站</a></li>
+            <li>|</li>
+            <li><a href="javascript:void(0)" onclick="shoucang(document.title,window.location)">设为首页</a></li>
+            <li>|</li>
+            <li><a href="UserRoom.html" target="_blank">个人中心</a></li>
+            <li>|</li>
+            <li><a href="BookCar.html">购物车</a></li>
+            <li>
+                <img src="img/dd_header_shop.gif" alt="shopping" /></li>
+        </ul>
+    </div>
+</div>
+<div class="header_search">
+    <div class="logo">
+        <ul>
+            <li><a href="Index.html">
+                <img src="img/logo3.jpg" /></a></li>
+            <li class="logo_tel">
+                <img src="img/bg_01.gif" /></li>
+        </ul>
+    </div>
+    <div class="search">
+        <div class="search_area">
+            <input type="submit" name="header1$btnSearch" value="搜 索" id="header1_btnSearch" class="btn_search" />
+            <div class="search_select">
+                <span class="icon-search"></span>
+            </div>
+            <input name="header1$txtKeyword" type="text" id="header1_txtKeyword" value="请输入搜索图书内容" data-default="请输入搜索图书内容" onblur="checkInputBlur($(this))" onfocus="checkInputFocus($(this))" class="search_input" />
+        </div>
+    </div>
+</div>
+<div id="nav" class="nav">
+    
+    <div class='nav_main'>
+        <ul id="navigation">
+            <li><a href="Index.html" class="current"><img  src="img/home142.png" style=" width:auto; height:12px"/> 首 页</a></li>
+            <li onmouseover="displaySubMenu()" onmouseout="hideSubMenu()">
+               <a>图书分类 <img  src="img/thumbnails.png" style=" width:auto; height:12px"/></a> 
+                <ul id="category">
+                    <table id="header1_dlCate" cellspacing="0" style="border-collapse:collapse;">
+	<tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=1'>
+                                    C#高级编程1</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=15'>
+                                    C C+</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=16'>
+                                    VB Script</a></li>
+                            </div>
+                        </td>
+	</tr><tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=17'>
+                                    计算机等级考试1</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=20'>
+                                    计算机理论</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=21'>
+                                    Java </a></li>
+                            </div>
+                        </td>
+	</tr><tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=22'>
+                                    HTML XML</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=25'>
+                                    .NET</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=27'>
+                                    网站开发</a></li>
+                            </div>
+                        </td>
+	</tr><tr>
+		<td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=29'>
+                                    ASP.NET</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=31'>
+                                    JSP</a></li>
+                            </div>
+                        </td><td>
+                            <div class="book_cate">
+                                <li><a href='CategoryList.html?categoryId=38'>
+                                    电子商务</a></li>
+                            </div>
+                        </td>
+	</tr>
+</table>
+                </ul>
+
+            </li>
+            <li> <a href="BookList.html">所有图书</a></li>
+            <li><a href="BookList.html?type=1">新书上架</a></li>
+            <li><a href="BookList.html?type=2">特价图书</a></li>
+            <li><a href="#">图书资讯</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+        <span class='icon_hot'></span>
+    </div>
+</div>
+
+        </div>
+        <!--网站中间内容开始-->
+        <div id="main">
+            <div class="main_first">
+                <!--左侧菜单开始-->
+                
+                <!--滚动图片开始-->
+                
+                <div id="box">
+                    <ul id="list">
+                        <li><a href="#">
+                            <img style="width: 620px; height: 300px" src="img/book1.jpg" /></a></li>
+                        <li><a href="#">
+                            <img style="width: 620px; height: 300px" src="img/book2.jpeg" /></a></li>
+                        <li><a href="#">
+                            <img style="width: 620px; height: 300px" src="img/book3.jpg" /></a></li>
+                        <li><a href="#">
+                            <img style="width: 620px; height: 300px" src="img/book4.jpg" /></a></li>
+                        <li><a href="#">
+                            <img style="width: 620px; height: 300px" src="img/book5.jpg" /></a></li>
+                    </ul>
+                    <ul id="num">
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </div>
+                <!--右侧新闻开始-->
+                <div id="silder">
+                    <div class="news_list">
+                        <div class="news_list_bg">
+                            <img src="img/dd_book_cate_icon.gif" alt="新闻" />
+                            图书资讯
+                            <a href="#" style="float: right; font-size: 12px; color: white">更多>></a>
+                        </div>
+                        <div class="new_content">
+                            <ul>
+                                <li><a href="#">ASP.NET最新版图书，召开新闻发布会</a> <span>2016-07-12</span></li>
+                                <li><a href="#">微软公司发布VS2017，用户纷纷点赞</a> <span>2016-06-16</span></li>
+                                <li><a href="#">ASP.NET最新版图书，召开新闻发布会</a> <span>2016-05-01</span></li>
+                                <li><a href="#">微软公司发布VS2017，用户纷纷点赞</a> <span>2016-04-22</span></li>
+                                <li><a href="#">ASP.NET最新版图书，召开新闻发布会</a> <span>2016-04-18</span></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_second">
+                <div class="main_second_left">
+                    <div class="book_sort">
+                        <div class="book_new">
+                            <div class="book_left">最新上架</div>
+                            <div class="book_right"><a href="BookList.html?type=1">更多>></a></div>
+                        </div>
+
+                        <div class="book_class">
+                            <table id="dlNewsBook" cellspacing="0" cellpadding="4" align="Center" rules="rows" style="color:Black;background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;border-collapse:collapse;">
+	
+</table>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_second_right">
+                    <div class="main_second_left">
+                        <div class="book_sort">
+                            <div class="book_new">
+                                <div class="book_left">特价图书</div>
+                                <div class="book_right"><a href="BookList.html?type=2">更多>></a></div>
+                            </div>
+                            <div id="bookList1">
+                                <table id="dlSpecialBook" cellspacing="0" cellpadding="4" align="Center" rules="rows" style="color:Black;background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;border-collapse:collapse;">
+	
+</table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both; height: 20px"></div>
+        <!--网站底部内容开始-->
+        <div id="footer">
+            
+<link href="css/global.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/template.css" rel="stylesheet" />
+    <link href="css/focus.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/public.js"></script>
+<div class="footer_top"><a href="#" target="_parent" class="footer_dull_red">公司简介</a> | <a href="#" target="_parent" class="footer_dull_red">诚证英才</a> | <a href="#" target="_parent" class="footer_dull_red">网站联盟</a> | <a href="#" target="_parent" class="footer_dull_red">百货招商</a> | <a href="#" target="_parent" class="footer_dull_red">交易条款</a></div>
+<div class="footer_end">
+    Copyright (C) <a href="#" target="_blank">网上书店</a> 2016-2026, All Rights Reserved 
+                <img src="#" alt="版权" style="vertical-align: middle;" />
+    鲁ICP证2016888号 图书销售经营许可证
+</div>
+
+        </div>
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3885C23E" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="xjLtRfi/R91StKrsCo1TTJwNX78H3MVRq9TDpCXUXVfcxw6rg+zIaOJKnqifM0aWKURSzgvCs0rO2foy98ZlXbDOuVj3ZDwT/6F6GFzbhhcWm5AUPo0+TCmI/V/9/rSh8FG8vAFgMu/6NEZnsMchTg==" />
+</div></form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Firefox","requestId":"776b151488cd410fa7df3f2773ed0883"}
+</script>
+<script type="text/javascript" src="http://localhost:16604/684f63152dfd463dab384f72747561d2/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>

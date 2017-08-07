@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="renderer" content="webkit" /><title>
+	用户登录
+</title><link rel="stylesheet" href="css/admin.css" /><link rel="stylesheet" href="css/pintuer.css" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/pintuer.js"></script>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <form method="post" action="./UserLogin.html" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="zBNCRPKteRf++LdZ/GCh4+CTOWyPRgJZ0eckEvJj6U8j+IPUSZAqVCzGBL65mk2cjSYz1XlusbSkEbyC5KXiwJHH4Hcz+tExbKwau1aOGLFEdVWjDhgfEkfJfNtfU5jq" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMaopRV5Hsrgs3jHpuEWFjtLO7ddtlpHu6wmJ_kguUedYm7EjnlhAFTK2W2HD_ca4Q2&amp;t=636255676860000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=9yI70IQfdNWWOGHK2vEJ3xSzz7-wxrKaSIatDsw5xYL0WP40DOOlmvC_Z-J0SWhuHgcBAx7XjQ9EnKU3I1nnpyMOe5bZbsgOpvcPuo60UWg47lgsQczlipVnu_y2orDl18HT_qFHdaLygngHfmrUFDIMx3qIhw6GVMI7DVKlMIA1&amp;t=ffffffff8ce90d1e" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 客户端框架未能加载。');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=McM9khqfd8P8zkBy4_CKwq7_aWJDab7uYZJrmCxk0xbRJaVhJrVLEFHoD6nGjKcP0xvLIGT1AWl8kJPcqF48slCb0URj13VPrJe1Li4e7fFFehQYDjTdVis8DGUKEDW7EktSSLOD3LnVjPrfEILq5ZFy7NgpBKtQDPSMioWIV0ouaOl5k1UcDyJJOYCcdCVX0&amp;t=ffffffff8ce90d1e" type="text/javascript"></script>
+<script src="/WebResource.axd?d=JoBkLzP19aTuxbWOhHobYgOlMaXRBiY3OtKdVqvT1AZhZJWj0shXFpqTUXCz8FlNT4fBrLDaSp4FGCEN6y-Aaw2&amp;t=636255676860000000" type="text/javascript"></script>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tup','up'], [], [], 90, '');
+//]]>
+</script>
+
+        <div class="bg">
+            <div class="container">
+                <div class="line bouncein">
+                    <div class="xs6 xm4 xs3-move xm4-move">
+                        <div style="height: 75px;"></div>
+                        <div class="media media-y margin-big-bottom">
+                        </div>
+                        <div class="panel loginbox">
+                            <div class="text-center margin-big padding-big-top">
+                                <h1>
+                                    <img id="Image1" src="img/userkey.png" style="height:50px;" />
+                                    网上书店-用户登录</h1>
+                            </div>
+                            <div class="panel-body" style="padding: 30px; padding-bottom: 10px; padding-top: 10px;">
+                                <div class="form-group">
+                                    <div class="field field-icon-right">
+                                        <input name="txtLoginId" type="text" id="txtLoginId" class="input input-big" placeholder="登录账号" data-validate="required:请输入登录账号" />
+                                        <span class="icon icon-user margin-small"></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="field field-icon-right">
+                                        <input name="txtLoginPwd" type="password" id="txtLoginPwd" class="input input-big" placeholder="登录密码" data-validate="required:请输入登录密码" />
+                                        
+                                        <span class="icon icon-key margin-small"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="field">
+                                        <input name="txtLogincode" type="text" id="txtLogincode" class="input input-big" placeholder="验证码" data-validate="required:请输入验证码" />
+                                        
+                                        <img src="../CreateCode.html" alt="" width="80" height="32" class="passcode" style="height: 43px; cursor: pointer;" />
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="up">
+	
+                                    <div style="padding: 10px 90px 30px 100px;">
+                                        <input type="submit" name="btnlogin" value="登录" id="btnlogin" class="button bg-main" />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a id="lbtnRegister" class="button bg-red" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbtnRegister&quot;, &quot;&quot;, false, &quot;&quot;, &quot;UserRegister.html&quot;, false, true))">注册</a>
+                                    </div>
+                                
+</div>
+                            <div style="float: right">
+                                <a href="Index.html">返回首页</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C4920307" />
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="yb23KQUbAqDf_yUgq31qdXLizx-YAgG0b2nVUilEDuuhjoPgBS28BPqCRi8fTg8GgibP2HK33Mc7DncET66v21kH2wLYyl5c_sci24OgsZE1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="ql1ma66PPaIUyXfvZIQFOmR8FVQw+v/6KLyIYKw2A2GTd1JWCnf0NiY0YjwSsiB+JWcck4QVRQEbK143LtzUWcJQnptbzEB6wtBe+CJZPZd5aEkNola+jy2S2m0EUmK3YoqXmyBoCm+A6ttEGdN/5vKqB72PVLHznogrbNp71/wc2qQ7J1a9BmlgbWUl03KgDBH/5vaubG/CUcrxvhoi/g==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('txtLoginId');//]]>
+</script>
+</form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Firefox","requestId":"e069346937dd4ebaaa1439ba01a28bfd"}
+</script>
+<script type="text/javascript" src="http://localhost:16604/684f63152dfd463dab384f72747561d2/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>
+
